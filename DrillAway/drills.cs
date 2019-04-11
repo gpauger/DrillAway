@@ -8,6 +8,24 @@ namespace DrillAway
 {
     public static class drills
     {
+        public static string Rot13(string message)
+        {
+            string mes13 = "";
+            
+          foreach (char c in message)
+            {
+                int d =  Convert.ToInt16(c);
+                if (d > 64 && d < 77 || d >= 97 && d < 110)
+                { d = d + 13; }
+                else if (d >= 77 && d <= 90 || d >= 110 && d < 123)
+                { d = d - 13; }
+                else { d = d; }
+                char e = Convert.ToChar(d);
+                mes13 = mes13 + e;
+               
+            }
+            return mes13;
+        }
 
         public static string CreatePhoneNumber(int[] numbers)
         {

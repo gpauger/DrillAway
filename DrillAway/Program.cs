@@ -10,8 +10,11 @@ namespace DrillAway
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(drills.CreatePhoneNumber(new int[] { 1,2,3,4,5,6,7,8,9,0}));
+            Console.WriteLine(drills.Rot13("Hello World!"));
             Console.ReadLine();
+
+            //Console.WriteLine(drills.CreatePhoneNumber(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }));
+            //Console.ReadLine();
 
             //Console.WriteLine(drills.Likes(new string[] { "Peter" }));
             //Console.ReadLine();
