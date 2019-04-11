@@ -9,6 +9,20 @@ namespace DrillAway
     public static class drills
     {
 
+        public static string CreatePhoneNumber(int[] numbers)
+        {
+            string phonenumber = "";
+            foreach (int i in numbers)
+            {
+                phonenumber = phonenumber + i.ToString();
+            }
+            phonenumber = phonenumber.Insert(0, "(");
+            phonenumber = phonenumber.Insert(4, ")");
+            phonenumber = phonenumber.Insert(5, " ");
+            phonenumber = phonenumber.Insert(9, "-");
+            return phonenumber;
+        }
+
         public static string Likes(string[] name)
         {
             int x = name.Count();

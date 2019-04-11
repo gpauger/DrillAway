@@ -10,14 +10,17 @@ namespace DrillAway
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(drills.Likes(new string[] { "Peter" }));
+            Console.WriteLine(drills.CreatePhoneNumber(new int[] { 1,2,3,4,5,6,7,8,9,0}));
             Console.ReadLine();
-            Console.WriteLine(drills.Likes(new string[] { "Jacob", "Alex" }));
-            Console.ReadLine();
-            Console.WriteLine(drills.Likes(new string[] { "Max", "John", "Mark" }));
-            Console.ReadLine();
-            Console.WriteLine(drills.Likes(new string[] { "Alex", "Jacob", "Mark", "Max" }));
-            Console.ReadLine();
+
+            //Console.WriteLine(drills.Likes(new string[] { "Peter" }));
+            //Console.ReadLine();
+            //Console.WriteLine(drills.Likes(new string[] { "Jacob", "Alex" }));
+            //Console.ReadLine();
+            //Console.WriteLine(drills.Likes(new string[] { "Max", "John", "Mark" }));
+            //Console.ReadLine();
+            //Console.WriteLine(drills.Likes(new string[] { "Alex", "Jacob", "Mark", "Max" }));
+            //Console.ReadLine();
         }
     }
 }
