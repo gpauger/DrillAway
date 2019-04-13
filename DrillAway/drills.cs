@@ -8,6 +8,47 @@ namespace DrillAway
 {
     public static class drills
     {
+        public static int[] MoveZeroes(int[] arr)
+        {
+            //if arr[i] != 0 add to new array.  if == 0 count up.  and count(s) 0s to array and return
+            List<int> newlist = new List<int>();
+            int count = 0;
+            foreach (int i in arr)
+            {
+                if (i != 0) { newlist.Add(i); }
+                else { count++; }
+            }
+            while (count > 0) { newlist.Add(0); count--; }
+            return newlist.ToArray();
+        }
+
+        public static int MaxSequence(int[] arr)
+        {
+            int max = 0;
+            //set max to arr[0], if arr[0] + arr[
+            int subsetCount = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int sum = arr[i];
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    sum += arr[j];
+                    for (int k = 0; k < arr.Length; k++)
+                    {
+                        if (arr[k] == sum)
+                        {
+                            subsetCount++;
+                           
+                        }
+                        if (sum > max) { max = sum; }
+                    }
+                    
+                }
+                
+            }
+            return max;
+        }
+
         public static string Rot13(string message)
         {
             string mes13 = "";
