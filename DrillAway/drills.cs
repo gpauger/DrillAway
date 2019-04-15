@@ -8,6 +8,23 @@ namespace DrillAway
 {
     public static class drills
     {
+        public static bool ValidParentheses(string input)
+        {
+            //set int to 1, if neg, return false
+            //for each ( add 1 for each ) subtract 1
+            //at end if 1 return true, else false
+            int i = 1;
+            foreach (char c in input)
+            {
+                if (i < 1) return false;
+                if (c.ToString() == "(") i++;
+                else if (c.ToString() == ")") i--;
+                
+            }
+            if (i == 1) return true;
+            else return false;
+        }
+
         public static int[] MoveZeroes(int[] arr)
         {
             //if arr[i] != 0 add to new array.  if == 0 count up.  and count(s) 0s to array and return
