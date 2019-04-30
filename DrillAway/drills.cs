@@ -8,6 +8,30 @@ namespace DrillAway
 {
     public static class drills
     {
+
+        public static int DblLinear(int n)
+        {
+            List<int> termsList = new List<int>();
+            int x = 1;
+            termsList.Add(x);
+            for (int i = 0; i < n; i++)
+            {
+                termsList.Add(2 * x + 1);
+                termsList.Add(3 * x + 1);
+                //x = termsList[i + 1]; faster and works until large numbers
+                int[] holder = termsList.ToArray();
+                Array.Sort(holder);
+                x = holder[i + 1];
+            }
+
+            // You can convert it back to an array if you would like to
+           termsList = termsList.Distinct().ToList();
+            int[] terms = termsList.ToArray();
+            Array.Sort(terms);
+            return terms[n];
+
+        }
+
         public static bool ValidParentheses(string input)
         {
             //set int to 1, if neg, return false

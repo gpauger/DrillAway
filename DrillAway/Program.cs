@@ -10,9 +10,13 @@ namespace DrillAway
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(drills.ValidParentheses("((())())"));
-            Console.WriteLine(drills.ValidParentheses("((())"));
+            //Console.WriteLine(drills.DblLinear(90));
+            Console.WriteLine(drills.DblLinear(100));
             Console.ReadLine();
+
+            //Console.WriteLine(drills.ValidParentheses("((())())"));
+            //Console.WriteLine(drills.ValidParentheses("((())"));
+            //Console.ReadLine();
 
             //Console.WriteLine(drills.MoveZeroes(new int[] { 1, 2, 3, 0, 5, 6, 7, 0, 9, -5 }));
             //Console.ReadLine();
