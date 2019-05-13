@@ -8,6 +8,25 @@ namespace DrillAway
 {
     public static class drills
     {
+        public static int solve(string s)
+        {
+            string t = s.ToUpper();
+            int z = 0;
+            int y = 0;
+            foreach (char c in t)
+            {
+                
+                int x = Convert.ToInt16(c) - 64;
+                if (x == 1)  { y = 0; }
+                else if (x == 5) { y = 0; }
+                else if (x == 9) { y = 0; }
+                else if (x == 15) { y = 0; }
+                else if (x == 21) { y = 0; }
+                else { y = y + x; }
+                if (y > z) { z = y; }
+            }
+                return z;
+        }
 
         public static int DblLinear(int n)
         {

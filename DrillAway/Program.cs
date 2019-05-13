@@ -10,9 +10,12 @@ namespace DrillAway
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine(drills.DblLinear(90));
-            Console.WriteLine(drills.DblLinear(100));
+            Console.WriteLine(drills.solve("strength"));
             Console.ReadLine();
+
+            //Console.WriteLine(drills.DblLinear(90));
+            //Console.WriteLine(drills.DblLinear(100));
+            // Console.ReadLine(); 
 
             //Console.WriteLine(drills.ValidParentheses("((())())"));
             //Console.WriteLine(drills.ValidParentheses("((())"));
